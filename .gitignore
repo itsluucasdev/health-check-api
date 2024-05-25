@@ -1,32 +1,71 @@
-# Prerequisites
-*.d
+# Compiled source
+src/**/*.dll
+src/**/*.exe
+src/**/*.so
+src/**/*.dylib
+src/**/*.pdb
+src/**/*.dll.config
+src/**/*.exe.config
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Include source files but exclude generated ones
+!src/**/*.cs
+src/**/*.csproj.user
 
-# Precompiled Headers
-*.gch
-*.pch
+# Folders
+src/**/bin/
+src/**/obj/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Rider IDE files
+src/.idea/
+src/.idea_modules/
+src/*.sln.iml
 
-# Fortran module files
-*.mod
-*.smod
+# Rider workspace.xml
+src/.idea/workspace.xml
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# User-specific Rider files
+src/.idea/.idea./.rider_*
 
-# Executables
-*.exe
-*.out
-*.app
+# Rider plugin-specific cache
+src/.idea/.rider_user_*
+
+# JetBrains Rider & Resharper
+src/*.DotSettings.user
+
+# VS Code directory
+src/.vscode/
+
+# Visual Studio Code metadata
+src/*.vs/
+src/.vscode/
+
+# User-specific files
+src/*.rsuser
+src/*.suo
+src/*.user
+src/*.userosscache
+src/*.sln.docstates
+
+# Mono Auto Generated Files
+src/mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Mac OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+._*
+
+# End of default ignores
