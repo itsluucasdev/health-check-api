@@ -1,10 +1,11 @@
-﻿using HealthCheck.Domain.HealthCheck;
+﻿using HealthCheck.Application.HealthCheck.DTO;
+using HealthCheck.Domain.HealthCheck;
 
 namespace HealthCheck.Application.HealthCheck;
 
 public interface IHealthCheckService
 {
-    Task<MonitoredApi> CreateMonitoredApi();
+    MonitoredApi CreateMonitoredApi(MonitoredApiDTO monitoredApiDTO);
     Task<MonitoredApi> GetMonitoredApi(string hash);
     Task<MonitoredApi> GetMonitoredApi();
 }
