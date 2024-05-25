@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Application Stacks", "01 - Application Stacks", "{14A8AF9F-176A-4621-ADDA-0B560DE9B3C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Application Layer", "02 - Application Layer", "{3F44BF2B-428C-4214-83A4-ADDBE24D0187}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain Layer", "03 - Domain Layer", "{3AF97580-41D7-42E8-8480-43E1F02502FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Infrastructure Layer", "04 - Infrastructure Layer", "{D225D8BC-1A82-412C-B036-B2007EFDAF45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Utils", "05 - Utils", "{9D2B6CF0-C7B6-4746-B69B-FEDC96B208F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Application", "HealthCheck.Application\HealthCheck.Application.csproj", "{E3CE60E7-17CA-4399-A230-E504F38B7624}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Domain", "HealthCheck.Domain\HealthCheck.Domain.csproj", "{A7D65891-7F63-43FE-9501-F7C70BCEF459}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Utils", "HealthCheck.Utils\HealthCheck.Utils.csproj", "{C7ABA64A-3D94-4476-99AF-2E3955E215D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthCheck.Infrastructure", "HealthCheck.Infrastructure\HealthCheck.Infrastructure.csproj", "{D575C773-9E07-4E9D-9D34-EA6BEF869A68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E3CE60E7-17CA-4399-A230-E504F38B7624} = {3F44BF2B-428C-4214-83A4-ADDBE24D0187}
+		{A7D65891-7F63-43FE-9501-F7C70BCEF459} = {3AF97580-41D7-42E8-8480-43E1F02502FA}
+		{C7ABA64A-3D94-4476-99AF-2E3955E215D5} = {9D2B6CF0-C7B6-4746-B69B-FEDC96B208F3}
+		{D575C773-9E07-4E9D-9D34-EA6BEF869A68} = {D225D8BC-1A82-412C-B036-B2007EFDAF45}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E3CE60E7-17CA-4399-A230-E504F38B7624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CE60E7-17CA-4399-A230-E504F38B7624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CE60E7-17CA-4399-A230-E504F38B7624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CE60E7-17CA-4399-A230-E504F38B7624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7D65891-7F63-43FE-9501-F7C70BCEF459}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7D65891-7F63-43FE-9501-F7C70BCEF459}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7D65891-7F63-43FE-9501-F7C70BCEF459}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7D65891-7F63-43FE-9501-F7C70BCEF459}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7ABA64A-3D94-4476-99AF-2E3955E215D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7ABA64A-3D94-4476-99AF-2E3955E215D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7ABA64A-3D94-4476-99AF-2E3955E215D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7ABA64A-3D94-4476-99AF-2E3955E215D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D575C773-9E07-4E9D-9D34-EA6BEF869A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D575C773-9E07-4E9D-9D34-EA6BEF869A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D575C773-9E07-4E9D-9D34-EA6BEF869A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D575C773-9E07-4E9D-9D34-EA6BEF869A68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
