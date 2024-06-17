@@ -14,7 +14,7 @@ public class HealthCheckService : IHealthCheckService
             Hash = Guid.NewGuid().ToString(),
             Name = monitoredItemDTO.Name,
             Description = monitoredItemDTO.Description,
-            HttpMethod = monitoredItemDTO.Method?.ToString(),
+            HttpMethod = monitoredItemDTO.HttpMethod?.ToString(),
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
