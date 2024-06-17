@@ -5,19 +5,16 @@ namespace HealthCheck.Application.HealthCheck;
 
 public class HealthCheckService : IHealthCheckService
 {
-    public MonitoredApi CreateMonitoredApi(MonitoredApiDTO monitoredApiDTO)
+    public MonitoredItem CreateMonitoredApi(MonitoredItemDTO monitoredItemDTO)
     {
         Console.WriteLine($"Start {nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
 
-        var monitoredApi = new MonitoredApi
+        var monitoredApi = new MonitoredItem
         {
             Hash = Guid.NewGuid().ToString(),
-            Name = monitoredApiDTO.Name,
-            Description = monitoredApiDTO.Description,
-            Url = monitoredApiDTO.Url,
-            HttpMethod = monitoredApiDTO.HttpMethod,
-            ExpectedCode = monitoredApiDTO.ExpectedCode,
-            ExpectedMessage = monitoredApiDTO.ExpectedMessage,
+            Name = monitoredItemDTO.Name,
+            Description = monitoredItemDTO.Description,
+            HttpMethod = monitoredItemDTO.Method?.ToString(),
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
@@ -25,12 +22,12 @@ public class HealthCheckService : IHealthCheckService
         return monitoredApi;
     }
 
-    public Task<MonitoredApi> GetMonitoredApi(string hash)
+    public Task<MonitoredItem> GetMonitoredApi(string hash)
     {
         throw new NotImplementedException();
     }
 
-    public Task<MonitoredApi> GetMonitoredApi()
+    public Task<MonitoredItem> GetMonitoredApi()
     {
         throw new NotImplementedException();
     }
