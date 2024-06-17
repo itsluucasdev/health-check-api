@@ -5,7 +5,7 @@ namespace HealthCheck.Application.HealthCheck;
 
 public interface IHealthCheckService
 {
-    MonitoredApi CreateMonitoredApi(MonitoredApiDTO monitoredApiDTO);
-    Task<MonitoredApi> GetMonitoredApi(string hash);
-    Task<MonitoredApi> GetMonitoredApi();
+    MonitoredItem CreateMonitoredApi(MonitoredItemDTO monitoredItemDTO);
+    Task<MonitoredItem> GetMonitoredApi(string hash);
+    Task<MonitoredItem> GetMonitoredApi();
 }
