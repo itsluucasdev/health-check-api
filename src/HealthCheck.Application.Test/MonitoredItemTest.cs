@@ -1,6 +1,7 @@
 using FluentAssertions;
 using HealthCheck.Application.HealthCheck;
 using HealthCheck.Application.HealthCheck.DTO;
+using HealthCheck.Application.Services;
 using HealthCheck.Domain.Enums;
 using HealthCheck.Domain.HealthCheck;
 using HealthCheck.Utils.CronExpression;
@@ -8,14 +9,8 @@ using HealthCheck.Utils.CronExpression;
 namespace HealthCheck.Application.Test;
 
 [TestClass]
-public class MonitoredItemTest(IHealthCheckService healthCheckService)
+public class MonitoredItemTest
 {
-    [ClassInitialize]
-    private void Setup()
-    {
-        healthCheckService = new HealthCheckService();
-    }
-    
     [TestMethod]
     public void CreateMonitoredItemTest()
     {
@@ -25,7 +20,7 @@ public class MonitoredItemTest(IHealthCheckService healthCheckService)
             Description = "Test Mofardini API",
             Endpoint = "http://url-test.com",
             HttpMethod = HttpMethod.Post,
-            User = "mofardlu",
+            CreatedBy = "mofardlu",
             Periodicity = 3600,
             DaysOfWeek =
             [
@@ -44,7 +39,7 @@ public class MonitoredItemTest(IHealthCheckService healthCheckService)
             HttpMethod = inputDTO.HttpMethod.ToString(),
             CreatedAt = DateTime.Now,
             UpdatedAt = null,
-            CreatedBy = inputDTO.User,
+            CreatedBy = inputDTO.CreatedBy,
             UpdatedBy = null,
             CronExpression = CronHelper.ConvertFrom(inputDTO.Periodicity, inputDTO.DaysOfWeek),
             LastStatus = null,
@@ -52,7 +47,9 @@ public class MonitoredItemTest(IHealthCheckService healthCheckService)
             AuthenticationType = (int) inputDTO.AuthenticationType
         };
 
-        var result = healthCheckService.CreateMonitoredApi(inputDTO);
+        var service = new HealthCheckService(new MonitoredItemService());
+        
+        var result = service.CreateMonitoredApi(inputDTO);
 
         result.Should().Be(expectedResult);
     }

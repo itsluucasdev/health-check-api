@@ -1,7 +1,7 @@
 ﻿using HealthCheck.Application.HealthCheck.DTO;
 using HealthCheck.Domain.HealthCheck;
 
-namespace HealthCheck.Application.HealthCheck;
+namespace HealthCheck.Application.Interfaces;
 
 public interface IHealthCheckService
 {
