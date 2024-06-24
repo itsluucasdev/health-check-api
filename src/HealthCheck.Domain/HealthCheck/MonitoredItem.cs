@@ -2,8 +2,8 @@
 
 public class MonitoredItem
 {
-    public string? Schema { get; set; }
     public string? Hash { get; set; }
+    public string? Schema { get; set; }
     public string? Name { get; set; }
     public string? Description { get; set; }
     public string? Endpoint { get; set; }
