@@ -15,5 +15,4 @@ public class MonitoredItem
     public int AuthenticationType { get; set; }
     public int? LastStatus { get; set; }
     public DateTime? LastRun { get; set; }
-    
 }
