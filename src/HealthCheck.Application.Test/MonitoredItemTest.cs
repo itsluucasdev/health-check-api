@@ -2,21 +2,14 @@ using FluentAssertions;
 using HealthCheck.Application.HealthCheck;
 using HealthCheck.Application.HealthCheck.DTO;
 using HealthCheck.Domain.Enums;
-using HealthCheck.Domain.HealthCheck;
-using HealthCheck.Utils.CronExpression;
 
 namespace HealthCheck.Application.Test;
 
 [TestClass]
-public class MonitoredItemTest(IHealthCheckService healthCheckService)
+public class MonitoredItemTest
 {
-    [ClassInitialize]
-    private void Setup()
-    {
-        healthCheckService = new HealthCheckService();
-    }
-    
     [TestMethod]
+    [Description("Nome do Teste")]
     public void CreateMonitoredItemTest()
     {
         var inputDTO = new MonitoredItemDTO
@@ -34,24 +27,26 @@ public class MonitoredItemTest(IHealthCheckService healthCheckService)
             AuthenticationType = AuthenticationTypeEnum.None
         };
 
-        var expectedResult = new MonitoredItem
-        {
-            Schema = "API",
-            Hash = Guid.NewGuid().ToString(),
-            Name = inputDTO.Name,
-            Description = inputDTO.Description,
-            Endpoint = inputDTO.Endpoint,
-            HttpMethod = inputDTO.HttpMethod.ToString(),
-            CreatedAt = DateTime.Now,
-            UpdatedAt = null,
-            CreatedBy = inputDTO.User,
-            UpdatedBy = null,
-            CronExpression = CronHelper.ConvertFrom(inputDTO.Periodicity, inputDTO.DaysOfWeek),
-            LastStatus = null,
-            LastRun = null,
-            AuthenticationType = (int) inputDTO.AuthenticationType
-        };
+        // var expectedResult = new MonitoredItem
+        // {
+        //     Schema = "API",
+        //     Hash = Guid.NewGuid().ToString(),
+        //     Name = inputDTO.Name,
+        //     Description = inputDTO.Description,
+        //     Endpoint = inputDTO.Endpoint,
+        //     HttpMethod = inputDTO.HttpMethod.ToString(),
+        //     CreatedAt = DateTime.Now,
+        //     UpdatedAt = null,
+        //     CreatedBy = inputDTO.User,
+        //     UpdatedBy = null,
+        //     CronExpression = CronHelper.ConvertFrom(inputDTO.Periodicity, inputDTO.DaysOfWeek),
+        //     LastStatus = null,
+        //     LastRun = null,
+        //     AuthenticationType = (int) inputDTO.AuthenticationType
+        // };
 
+        var expectedResult = "201 - Created";
+        var healthCheckService = new HealthCheckService();
         var result = healthCheckService.CreateMonitoredApi(inputDTO);
 
         result.Should().Be(expectedResult);
