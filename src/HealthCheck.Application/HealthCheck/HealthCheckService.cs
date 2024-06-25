@@ -9,15 +9,7 @@ public class HealthCheckService : IHealthCheckService
     {
         Console.WriteLine($"Start {nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
 
-        var monitoredApi = new MonitoredItem
-        {
-            Hash = Guid.NewGuid().ToString(),
-            Name = monitoredItemDTO.Name,
-            Description = monitoredItemDTO.Description,
-            HttpMethod = monitoredItemDTO.HttpMethod?.ToString(),
-            CreatedAt = DateTime.Now,
-            UpdatedAt = DateTime.Now
-        };
+        var monitoredApi = CreateItemFrom(monitoredItemDTO);
 
         return monitoredApi;
     }
@@ -31,4 +23,18 @@ public class HealthCheckService : IHealthCheckService
     {
         throw new NotImplementedException();
     }
+
+    private static MonitoredItem CreateItemFrom(MonitoredItemDTO dto)
+        => new()
+        {
+            Hash = Guid.NewGuid().ToString(),
+            Schema = "API",
+            Name = dto.Name,
+            Description = dto.Description,
+            Endpoint = dto.Endpoint,
+            HttpMethod = dto.HttpMethod.ToString(),
+            CreatedBy = dto.User,
+            CreatedAt = DateTime.Now,
+            AuthenticationType = (int)dto.AuthenticationType,
+        };
 }
