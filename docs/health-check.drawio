@@ -1,9 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2024-06-24T23:14:01.303Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="24.6.0" etag="h7HWkbGhs_VnO8oEhRIP" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-24T23:59:07.068Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="sokntQpUb2yLvvaQ2DTp" version="24.6.0" type="github">
   <diagram name="Página-1" id="_NhiL4hbMV4p9CUbWllG">
-    <mxGraphModel>
+    <mxGraphModel dx="1232" dy="1145" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-1" value="health-check" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.dynamo_db;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="116" width="72" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Hypkn3wZTHS0okBcfJWC-5" target="Hypkn3wZTHS0okBcfJWC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-5" value="HC-MonitoredItem" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="70" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Hypkn3wZTHS0okBcfJWC-6" target="Hypkn3wZTHS0okBcfJWC-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-6" value="HealthCheckAPI" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="110" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-22" value="Schema: API" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="31.5" width="160" height="250" as="geometry">
+            <mxRectangle x="667" y="10" width="120" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-23" value="&lt;div&gt;&lt;div&gt;+Hash&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+Schema&lt;/div&gt;&lt;div&gt;+Name&lt;/div&gt;&lt;div&gt;+Description&lt;/div&gt;&lt;div&gt;+Endpoint&lt;/div&gt;&lt;div&gt;+HttpMethod&lt;/div&gt;&lt;div&gt;+CreatedBy&lt;/div&gt;&lt;div&gt;+CreatedAt&lt;/div&gt;&lt;div&gt;+UpdatedBy&lt;/div&gt;&lt;div&gt;+UpdatedAt&lt;/div&gt;&lt;div&gt;+AuthenticationType&lt;br&gt;&lt;/div&gt;&lt;div&gt;+LastStatus&lt;/div&gt;&lt;div&gt;+LastRun&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="Hypkn3wZTHS0okBcfJWC-22">
+          <mxGeometry y="50" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Hypkn3wZTHS0okBcfJWC-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Hypkn3wZTHS0okBcfJWC-23" target="Hypkn3wZTHS0okBcfJWC-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
