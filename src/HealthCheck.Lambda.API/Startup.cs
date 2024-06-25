@@ -13,6 +13,10 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+
+        services.AddSwaggerGen();
+
+        services.AddCors();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -21,12 +25,22 @@ public class Startup
         if (env.IsDevelopment())
         {
             app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
+
+        app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyOrigin();
+                c.AllowAnyMethod();
+            }
+        );
 
         app.UseHttpsRedirection();
 
         app.UseRouting();
-
+        
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>

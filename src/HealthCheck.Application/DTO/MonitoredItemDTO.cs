@@ -5,42 +5,42 @@ namespace HealthCheck.Application.HealthCheck.DTO;
 public class MonitoredItemDTO
 {
     /// <summary>
-    /// Nome
+    /// Nome da API
     /// </summary>
     public string Name { get; set; }
     
     /// <summary>
-    /// Descrição
+    /// Descrição da API
     /// </summary>
     public string Description { get; set; }
     
     /// <summary>
-    /// Endpoint
+    /// Endpoint da API
     /// </summary>
     public string Endpoint { get; set; }
     
     /// <summary>
-    /// Método HTTP
+    /// Método da request
     /// </summary>
     public HttpMethod HttpMethod { get; set; }
     
     /// <summary>
     /// Usuário
     /// </summary>
-    public string User { get; set; }
-    
-    /// <summary>
-    /// Periodicidade (milissegundos)
-    /// </summary>
-    public int Periodicity { get; set; }
+    public string CreatedBy { get; set; }
     
     /// <summary>
     /// Periodicidade (Dias da Semana [1-6])
     /// </summary>
+    public int Periodicity { get; set; }
+    
+    /// <summary>
+    /// Dias da semana que vai rodar
+    /// </summary>
     public int[] DaysOfWeek { get; set; }
     
     /// <summary>
-    /// Método de Autenticação
+    /// Tipo de autenticador
     /// </summary>
     public AuthenticationTypeEnum AuthenticationType { get; set; }
 }
