@@ -8,9 +8,7 @@
   "profile": "",
   "region": "",
   "configuration": "Release",
-  "function-architecture": "x86_64",
-  "function-runtime": "dotnet8",
-  "function-memory-size": 512,
-  "function-timeout": 30,
-  "function-handler": "HealthCheck.Lambda.API::HealthCheck.Lambda.API.Function::FunctionHandler"
+  "s3-prefix": "HealthCheck.Lambda.API/",
+  "template": "serverless.template",
+  "template-parameters": ""
 }
