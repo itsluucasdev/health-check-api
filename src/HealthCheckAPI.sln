@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheck.Utils.Test", "H
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheck.Application.Test", "HealthCheck.Application.Test\HealthCheck.Application.Test.csproj", "{0BFA039A-B44D-4328-8048-908F055DAA87}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheck.Lambda.API", "HealthCheck.Lambda.API\HealthCheck.Lambda.API.csproj", "{7429A6A9-A168-4505-9C0B-1A95F7C553E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthCheck.Lambda.API.Tests", "HealthCheck.Lambda.API.Tests\HealthCheck.Lambda.API.Tests.csproj", "{1BA61BDC-FA29-4C30-A758-E543A401745B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,14 @@ Global
 		{0BFA039A-B44D-4328-8048-908F055DAA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BFA039A-B44D-4328-8048-908F055DAA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BFA039A-B44D-4328-8048-908F055DAA87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7429A6A9-A168-4505-9C0B-1A95F7C553E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7429A6A9-A168-4505-9C0B-1A95F7C553E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7429A6A9-A168-4505-9C0B-1A95F7C553E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7429A6A9-A168-4505-9C0B-1A95F7C553E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA61BDC-FA29-4C30-A758-E543A401745B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA61BDC-FA29-4C30-A758-E543A401745B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA61BDC-FA29-4C30-A758-E543A401745B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA61BDC-FA29-4C30-A758-E543A401745B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,5 +78,7 @@ Global
 		{D575C773-9E07-4E9D-9D34-EA6BEF869A68} = {D225D8BC-1A82-412C-B036-B2007EFDAF45}
 		{CC495ACD-4DDF-4AD0-90E7-9F9A00E24011} = {9D2B6CF0-C7B6-4746-B69B-FEDC96B208F3}
 		{0BFA039A-B44D-4328-8048-908F055DAA87} = {3F44BF2B-428C-4214-83A4-ADDBE24D0187}
+		{7429A6A9-A168-4505-9C0B-1A95F7C553E8} = {14A8AF9F-176A-4621-ADDA-0B560DE9B3C1}
+		{1BA61BDC-FA29-4C30-A758-E543A401745B} = {14A8AF9F-176A-4621-ADDA-0B560DE9B3C1}
 	EndGlobalSection
 EndGlobal
