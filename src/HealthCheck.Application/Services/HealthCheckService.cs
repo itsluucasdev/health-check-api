@@ -1,5 +1,4 @@
-﻿using HealthCheck.Application.HealthCheck;
-using HealthCheck.Application.HealthCheck.DTO;
+﻿using HealthCheck.Application.HealthCheck.DTO;
 using HealthCheck.Application.Interfaces;
 using HealthCheck.Domain.HealthCheck;
 
