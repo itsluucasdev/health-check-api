@@ -6,9 +6,8 @@ namespace HealthCheck.Application.Services;
 
 public class MonitoredItemService : IMonitoredItemService
 {
-    public MonitoredItem CreateMonitoredItemFromDTO(MonitoredItemDTO dto)
-    {
-        return new MonitoredItem
+    public MonitoredItem CreateItemFrom(MonitoredItemDTO dto)
+        => new()
         {
             Hash = Guid.NewGuid().ToString(),
             Name = dto.Name,
@@ -17,5 +16,4 @@ public class MonitoredItemService : IMonitoredItemService
             CreatedAt = DateTime.Now,
             UpdatedAt = DateTime.Now
         };
-    }
 }

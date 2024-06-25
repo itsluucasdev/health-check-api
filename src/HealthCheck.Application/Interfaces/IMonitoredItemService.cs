@@ -5,5 +5,5 @@ namespace HealthCheck.Application.Interfaces;
 
 public interface IMonitoredItemService
 {
-    MonitoredItem CreateMonitoredItemFromDTO(MonitoredItemDTO dto);
+    MonitoredItem CreateItemFrom(MonitoredItemDTO dto);
 }

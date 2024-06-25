@@ -5,32 +5,32 @@ public class MonitoredItem
     /// <summary>
     /// UUID - Universal Unic Identifier  
     /// </summary>
-    public string? Hash { get; set; }
+    public string Hash { get; set; }
     
     /// <summary>
     /// Hash - API
     /// </summary>
-    public string? Schema { get; set; }
+    public string Schema { get; set; }
     
     /// <summary>
     /// Nome da API
     /// </summary>
-    public string? Name { get; set; }
+    public string Name { get; set; }
     
     /// <summary>
     /// Descrição da API
     /// </summary>
-    public string? Description { get; set; }
+    public string Description { get; set; }
     
     /// <summary>
     /// Endpoint da API
     /// </summary>
-    public string? Endpoint { get; set; }
+    public string Endpoint { get; set; }
     
     /// <summary>
     /// Método da request
     /// </summary>
-    public string? HttpMethod { get; set; }
+    public string HttpMethod { get; set; }
     
     /// <summary>
     /// Data de Criação
@@ -45,17 +45,17 @@ public class MonitoredItem
     /// <summary>
     /// Criado por
     /// </summary>
-    public string? CreatedBy { get; set; }
+    public string CreatedBy { get; set; }
     
     /// <summary>
     /// Atualizado Por
     /// </summary>
-    public string? UpdatedBy { get; set; }
+    public string UpdatedBy { get; set; }
     
     /// <summary>
     /// Expressão Cron
     /// </summary>
-    public string? CronExpression { get; set; }
+    public string CronExpression { get; set; }
     
     /// <summary>
     /// Ultimo Status salvo

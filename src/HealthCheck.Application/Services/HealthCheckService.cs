@@ -6,11 +6,11 @@ namespace HealthCheck.Application.Services;
 
 public class HealthCheckService(IMonitoredItemService monitoredItemService) : IHealthCheckService
 {
-    public MonitoredItem CreateMonitoredApi(MonitoredItemDTO dto)
+    public MonitoredItem CreateMonitoredApi(MonitoredItemDTO monitoredItemDTO)
     {
         Console.WriteLine($"Start {nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
         
-        var monitoredApi = monitoredItemService.CreateMonitoredItemFromDTO(dto);
+        var monitoredApi = monitoredItemService.CreateItemFrom(monitoredItemDTO);
 
         return monitoredApi;
     }

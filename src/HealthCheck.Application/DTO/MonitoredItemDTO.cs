@@ -30,7 +30,7 @@ public class MonitoredItemDTO
     public string CreatedBy { get; set; }
     
     /// <summary>
-    /// Periodicidade (milissegundos)
+    /// Periodicidade (Dias da Semana [1-6])
     /// </summary>
     public int Periodicity { get; set; }
     
