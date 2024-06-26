@@ -1,3 +1,5 @@
+using Microsoft.OpenApi.Models;
+
 namespace HealthCheck.Lambda.API;
 
 public class Startup
@@ -14,7 +16,14 @@ public class Startup
     {
         services.AddControllers();
 
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo
+            {
+                Title = "Health Check Serverless API",
+                Version = "v1"
+            });
+        });
 
         services.AddCors();
     }
