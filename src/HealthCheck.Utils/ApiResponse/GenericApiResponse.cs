@@ -1,10 +1,14 @@
-﻿using System.Net;
+﻿namespace HealthCheck.Utils.ApiResponse;
 
-namespace HealthCheck.Utils.ApiResponse;
-
-public class GenericApiResponse(HttpStatusCode code, string message, List<string> errors)
+public class GenericApiResponse
 {
-    public HttpStatusCode Code { get; set; } = code;
-    public string Message { get; set; } = message;
-    public List<string> Errors { get; set; } = errors;
+    public string Instance { get; set; }
+    public string Title { get; set; }
+    public int Status { get; set; }
+    private Errors Errors { get; set; } = new();
+}
+
+public class Errors
+{
+    public List<string> Messages { get; set; }
 }

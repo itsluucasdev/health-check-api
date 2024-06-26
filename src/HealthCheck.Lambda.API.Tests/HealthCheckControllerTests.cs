@@ -1,18 +1,14 @@
 using System.Text.Json;
-using Xunit;
-using Amazon.Lambda.Core;
 using Amazon.Lambda.TestUtilities;
 using Amazon.Lambda.APIGatewayEvents;
-
-
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace HealthCheck.Lambda.API.Tests;
 
+[TestClass]
 public class HealthCheckControllerTests
 {
-
-
-    [Fact]
+    [TestMethod]
     public async Task TestGet()
     {
         var lambdaFunction = new LambdaEntryPoint();
@@ -25,11 +21,9 @@ public class HealthCheckControllerTests
         var context = new TestLambdaContext();
         var response = await lambdaFunction.FunctionHandlerAsync(request, context);
 
-        Assert.Equal(200, response.StatusCode);
-        Assert.Equal("[\"value1\",\"value2\"]", response.Body);
-        Assert.True(response.MultiValueHeaders.ContainsKey("Content-Type"));
-        Assert.Equal("application/json; charset=utf-8", response.MultiValueHeaders["Content-Type"][0]);
+        Assert.Equals(200, response.StatusCode);
+        Assert.Equals("[\"value1\",\"value2\"]", response.Body);
+        Assert.IsTrue(response.MultiValueHeaders.ContainsKey("Content-Type"));
+        Assert.Equals("application/json; charset=utf-8", response.MultiValueHeaders["Content-Type"][0]);
     }
-
-
 }
