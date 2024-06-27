@@ -1,8 +1,7 @@
 namespace HealthCheck.Lambda.API;
-using HealthCheck.Application.Interfaces;
-using HealthCheck.Application.Services;
+using Application.Interfaces;
+using Application.Services;
 using Microsoft.OpenApi.Models;
-
 
 public class Startup
 {
