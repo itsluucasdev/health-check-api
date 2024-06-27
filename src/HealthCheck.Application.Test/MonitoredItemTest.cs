@@ -1,6 +1,4 @@
-using FluentAssertions;
-using HealthCheck.Application.HealthCheck;
-using HealthCheck.Application.HealthCheck.DTO;
+using HealthCheck.Application.DTO;
 using HealthCheck.Domain.Enums;
 using HealthCheck.Domain.HealthCheck;
 
@@ -10,7 +8,6 @@ namespace HealthCheck.Application.Test;
 public class MonitoredItemTest
 {
     [TestMethod]
-    [Description("Nome do Teste")]
     public void CreateMonitoredItemTest()
     {
         var inputDTO = new MonitoredItemDTO
@@ -23,7 +20,11 @@ public class MonitoredItemTest
             Periodicity = 3600,
             DaysOfWeek =
             [
-                2,3,4,5,6
+                2,
+                3,
+                4,
+                5,
+                6
             ],
             AuthenticationType = AuthenticationTypeEnum.None
         };
@@ -42,7 +43,7 @@ public class MonitoredItemTest
             UpdatedBy = null,
             LastStatus = null,
             LastRun = null,
-            AuthenticationType = (int) inputDTO.AuthenticationType
+            AuthenticationType = (int)inputDTO.AuthenticationType
         };
 
         // var healthCheckService = new HealthCheckService();

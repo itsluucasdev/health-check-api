@@ -1,15 +1,21 @@
-﻿using HealthCheck.Application.HealthCheck.DTO;
+﻿using HealthCheck.Application.DTO;
 using HealthCheck.Application.Interfaces;
 using HealthCheck.Domain.HealthCheck;
+using Microsoft.Extensions.Logging;
 
 namespace HealthCheck.Application.Services;
 
-public class HealthCheckService(IMonitoredItemService monitoredItemService) : IHealthCheckService
+public class HealthCheckService(
+    ILogger<HealthCheckService> logger,
+    IMonitoredItemService monitoredItemService)
+    : IHealthCheckService
 {
+    private readonly ILogger _logger = logger;
+
     public MonitoredItem CreateMonitoredApi(MonitoredItemDTO monitoredItemDTO)
     {
-        Console.WriteLine($"Start {nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
-        
+        _logger.LogInformation($"{nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
+
         var monitoredApi = monitoredItemService.CreateItemFrom(monitoredItemDTO);
 
         return monitoredApi;

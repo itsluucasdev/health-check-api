@@ -1,6 +1,7 @@
-using Microsoft.OpenApi.Models;
-
 namespace HealthCheck.Lambda.API;
+using Application.Interfaces;
+using Application.Services;
+using Microsoft.OpenApi.Models;
 
 public class Startup
 {
@@ -15,6 +16,8 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
+
+        services.AddSingleton<IHealthCheckService, HealthCheckService>();
 
         services.AddSwaggerGen(c =>
         {
@@ -49,7 +52,7 @@ public class Startup
         app.UseHttpsRedirection();
 
         app.UseRouting();
-        
+
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
