@@ -1,5 +1,3 @@
-using FluentAssertions;
-using HealthCheck.Application.HealthCheck;
 using HealthCheck.Application.HealthCheck.DTO;
 using HealthCheck.Domain.Enums;
 using HealthCheck.Domain.HealthCheck;
@@ -10,7 +8,6 @@ namespace HealthCheck.Application.Test;
 public class MonitoredItemTest
 {
     [TestMethod]
-    [Description("Nome do Teste")]
     public void CreateMonitoredItemTest()
     {
         var inputDTO = new MonitoredItemDTO
