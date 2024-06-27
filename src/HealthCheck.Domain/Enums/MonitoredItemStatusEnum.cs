@@ -6,7 +6,7 @@ public enum MonitoredItemStatusEnum
 {
     [Description("OFF-Line")]
     OffLine = 0,
-    
+
     [Description("ON-Line")]
     OnLine = 1
 }

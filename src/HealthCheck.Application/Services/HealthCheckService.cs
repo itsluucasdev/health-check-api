@@ -1,4 +1,4 @@
-﻿using HealthCheck.Application.HealthCheck.DTO;
+﻿using HealthCheck.Application.DTO;
 using HealthCheck.Application.Interfaces;
 using HealthCheck.Domain.HealthCheck;
 using Microsoft.Extensions.Logging;
@@ -15,7 +15,7 @@ public class HealthCheckService(
     public MonitoredItem CreateMonitoredApi(MonitoredItemDTO monitoredItemDTO)
     {
         _logger.LogInformation($"{nameof(HealthCheckService)}.{nameof(CreateMonitoredApi)}");
-        
+
         var monitoredApi = monitoredItemService.CreateItemFrom(monitoredItemDTO);
 
         return monitoredApi;

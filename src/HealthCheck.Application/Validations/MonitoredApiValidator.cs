@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using HealthCheck.Application.HealthCheck.DTO;
+using HealthCheck.Application.DTO;
 
 namespace HealthCheck.Application.HealthCheck.Validations;
 
@@ -11,7 +11,7 @@ public class MonitoredApiValidator : AbstractValidator<MonitoredItemDTO>
             .NotEmpty()
             .WithMessage($"Field {nameof(MonitoredItemDTO.Name)} must be filled")
             .WithErrorCode("422.100");
-        
+
         RuleFor(api => api.Description)
             .NotEmpty()
             .WithMessage($"Field {nameof(MonitoredItemDTO.Description)} must be filled");

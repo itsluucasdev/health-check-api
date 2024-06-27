@@ -1,4 +1,4 @@
-﻿using HealthCheck.Application.HealthCheck.DTO;
+﻿using HealthCheck.Application.DTO;
 using HealthCheck.Domain.HealthCheck;
 
 namespace HealthCheck.Application.Interfaces;

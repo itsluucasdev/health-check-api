@@ -18,7 +18,7 @@ public class Startup
         services.AddControllers();
 
         services.AddSingleton<IHealthCheckService, HealthCheckService>();
-    
+
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo
@@ -40,7 +40,7 @@ public class Startup
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        
+
         app.UseCors(c =>
             {
                 c.AllowAnyHeader();
@@ -52,7 +52,7 @@ public class Startup
         app.UseHttpsRedirection();
 
         app.UseRouting();
-        
+
         app.UseAuthorization();
 
         app.UseEndpoints(endpoints =>
